@@ -1,0 +1,20 @@
+<h3>New topic</h3>
+
+<form action="/topics/create" class="edit_topic" id="edit_topic" method="post">
+
+  <%=hidden_field :topic, :forum, :value => @forum.id %>
+  <p>
+    <label for="topic_title">Title</label><br />
+    <input id="topic_title" name="topic[title]" size="30" type="text" />
+  </p>
+  <p>
+    <label for="topic_description">Description</label><br />
+    <textarea cols="40" id="topic_description" name="topic[description]" rows="5"></textarea>
+  </p>
+  <%= render :partial => "/users/select_user", :locals => {:parent_obj => :topic} %>
+  <p>
+    <input id="topic_submit" name="commit" type="submit" value="Create" />
+  </p>
+
+</form>
+

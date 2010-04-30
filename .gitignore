@@ -1,0 +1,29 @@
+log/*.log
+log/*.pid
+tmp/**/*
+tmp/restart.txt
+app/tmp/**/*
+
+# Other useful tidbits
+.DS_Store
+config/database.yml
+config/amazon_s3.yml
+config/environments/development.rb
+db/schema.rb
+index/*
+public/javascripts/cache/*
+public/stylesheets/cache/*
+public/plugin_assets/*
+db/sphinx/*
+config/development.sphinx.conf
+config/test.sphinx.conf
+
+# JLS!
+*.swp
+config/environments/production.rb
+
+# Uncomment if we someday add gems as plugins
+# doc/api
+# doc/app
+
+*.tmproj

@@ -1,0 +1,17 @@
+<p><b>New post</b></p>
+
+<form action="/posts/create" class="edit_post" id="edit_post" method="post">
+
+  <%=hidden_field :post, :forum, :value => @forum.id %>
+  <%=hidden_field :post, :topic, :value => @forum.id %>
+  <p>
+    <label for="post_description">Description</label><br />
+    <textarea cols="40" id="post_description" name="post[description]" rows="5"></textarea>
+  </p>
+  <%= render :partial => "/users/select_user", :locals => {:parent_obj => :post} %>
+  <p>
+    <input id="post_submit" name="commit" type="submit" value="Create" />
+  </p>
+
+</form>
+

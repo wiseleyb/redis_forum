@@ -1,0 +1,10 @@
+<p><b>Topic: <%=topic.title%></b> - by <%=user_display(topic.user)%>
+  <br/>Posts: <%=topic.post_count%>
+  <br/>
+  <%=topic.description%>
+</p>
+<div style="margin-left:100px; border-left:1px solid black;">
+  <%= render :partial => "/posts/post", :collection => topic.posts %>
+
+  <%= render :partial => "/posts/new" %>
+</div>

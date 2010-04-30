@@ -1,0 +1,15 @@
+<h1>Forums</h1>
+
+<h3><%=h @forum.title %></h3>
+<%=h @forum.description %>
+<p>Topics: <%=@forum.topic_count%> | Posts: <%=@forum.post_count%> | Last Post Date: <%=@forum.last_post_date%></p>
+
+<%= link_to 'Edit', edit_forum_path(@forum) %> | <%= link_to 'Back', forums_path %> | created by <%=user_display(@forum.user) %>
+
+<hr/>
+
+<div style="margin-left:100px; border-left:1px solid black;">
+  <%= render :partial => "/topics/topic", :collection => @forum.topics %>
+
+  <%=render :partial => "/topics/new" %>
+</div>

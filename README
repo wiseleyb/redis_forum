@@ -1,0 +1,25 @@
+I wanted to learn something about redis so I did up this simple forum that uses only redis (no db/sql).  Still pretty rough in spots
+
+Findings:
+
+* without activerecord - you'll have to roll your own error handling for models
+* you can't use form_for on new objects
+
+To Do:
+* add destroy functionality to Remodel (currently deleting something like a forum leaves topics and posts under it)
+* add validation functionality to Remodel
+* figure out how to do paging with redis
+* add tests for changes to remodel
+
+To get started...
+
+1. find latest redis on redis.googlecode.com
+2. follow these instructions
+3. sudo chmod 755 /usr/bin/redis-server
+4. cd /usr/bin && sudo ./redis-server
+5. sudo gem install yajl-ruby
+6. script/console
+7. Dummy.new.gen_data  WARNING this nukes your redis file
+
+
+This is currently working off a modified fork of Remodel that's not ready for a pull request: git://github.com/wiseleyb/remodel.git
